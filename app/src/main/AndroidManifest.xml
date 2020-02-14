@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sapbusinessuser">
+
+    <application
+        android:name=".model.Dexer"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".Login_Activity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Register_Activity" android:launchMode="singleTask"/>
+
+
+        <activity android:name=".PeriodActivity" android:launchMode="singleTask"/>
+        <activity android:name=".topics_module.topics_prelim.Prelim_Topics" android:launchMode="singleTask"/>
+        <activity android:name=".topics_module.topics_midterm.Midterm_Topics" android:launchMode="singleTask"/>
+        <activity android:name=".topics_module.topics_finals.Finals_Topics" android:launchMode="singleTask"/>
+        <activity android:name=".lesson_module.lesson_list.Lesson_List" android:launchMode="singleTask"/>
+        <activity android:name=".lesson_module.lesson_view.LessonView" android:launchMode="singleTask"/>
+        <activity android:name=".quiz_module.quiz_midterm.Midterm_Quizes" android:launchMode="singleTask"/>
+        <activity android:name=".quiz_module.quiz_finals.Finals_Quizes" android:launchMode="singleTask"/>
+        <activity android:name=".quiz_module.quiz_prelim.Prelim_Quizes" android:launchMode="singleTask"/>
+        <activity android:name=".quiz_module.QuizPeriodActivity" android:launchMode="singleTask"/>
+        <activity android:name=".video_module.video_list.Video_List" android:launchMode="singleTask"/>
+        <activity android:name=".video_module.VideosPeriodActivity" android:launchMode="singleTask"/>
+        <activity android:name=".simulation.Simulation" android:launchMode="singleTask"/>
+        <activity android:name=".quiz_module.quiztem_list.Question_List" android:launchMode="singleTask"/>
+        <activity android:name=".video_module.video_prelim.Prelim_Videos" android:launchMode="singleTask"/>
+        <activity android:name=".video_module.video_finals.Finals_Videos" android:launchMode="singleTask"/>
+        <activity android:name=".video_module.video_midterm.Midterm_Videos" android:launchMode="singleTask"/>
+
+        <activity android:name=".quiz_module.quiz_view.View_Quiz" android:launchMode="singleTask"/>
+        <activity android:name=".quiz_module.quiz_result.Quiz_Result" android:launchMode="singleTask"/>
+
+        <activity android:name=".progress_module.ProgressActivity" android:launchMode="singleTask"/>
+
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            //horizontal row
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_weight=".90"
+                    android:orientation="horizontal"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+                    //colleft for image
+                    <LinearLayout
+                        android:id="@+id/linearLayout1"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/ic_dot"
+                            android:layout_width="5dp"
+                            android:layout_height="5dp" />
+                    </LinearLayout>
+                    //collright for title
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+                        android:layout_weight=".45"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_ilo_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

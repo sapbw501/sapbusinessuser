@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:id="@+id/questionz"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:textSize="25sp"
+            android:id="@+id/mult_Question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/question_multiple"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:paddingStart="@dimen/fab_margin"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_background"
+                android:textAllCaps="false"
+                android:id="@+id/choiceA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+
+                android:paddingStart="@dimen/fab_margin"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_background"
+                android:textAllCaps="false"
+                android:id="@+id/choiceB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:paddingStart="@dimen/fab_margin"
+                android:textAllCaps="false"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_background"
+                android:id="@+id/choiceC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+
+                android:paddingStart="@dimen/fab_margin"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:textAllCaps="false"
+                android:background="@drawable/button_background"
+                android:id="@+id/choiceD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/question_trueorfalse"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="True"
+                android:paddingStart="@dimen/fab_margin"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_background"
+                android:textAllCaps="false"
+                android:id="@+id/btn_true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+
+                android:text="False"
+                android:paddingStart="@dimen/fab_margin"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_background"
+                android:textAllCaps="false"
+                android:id="@+id/btn_false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/question_identification"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/identification_answer"
+                    android:hint="Input your answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+
+                android:text="Next"
+                android:paddingStart="@dimen/fab_margin"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_background"
+                android:textAllCaps="false"
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

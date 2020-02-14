@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+
+                android:id="@+id/questionz"
+                android:layout_margin="@dimen/fab_margin"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="@dimen/fab_margin"
+                    android:textSize="18sp"
+                    android:id="@+id/mult_Question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingStart="@dimen/fab_margin"
+                    android:textAlignment="textStart"
+                    android:layout_marginTop="5dp"
+                    android:textAllCaps="false"
+                    android:id="@+id/answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:paddingStart="16dp"
+                    android:textAlignment="textStart"
+                    android:layout_marginTop="5dp"
+                    android:textAllCaps="false"
+                    android:id="@+id/explanation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
