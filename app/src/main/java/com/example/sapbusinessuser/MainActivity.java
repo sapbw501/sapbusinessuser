@@ -3,8 +3,8 @@ package com.example.sapbusinessuser;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private AppPreference appPreference;
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         appPreference = new AppPreference(this);
         if(getSupportActionBar()==null){
             setSupportActionBar(toolbar);
-            toolbar.setTitleTextColor(Color.WHITE);
+            toolbar.setTitleTextColor(R.color.slategray);
 
         }
         btn_topics  = findViewById(R.id.topics);

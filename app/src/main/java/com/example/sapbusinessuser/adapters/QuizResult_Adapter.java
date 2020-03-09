@@ -56,7 +56,7 @@ public class QuizResult_Adapter extends RecyclerView.Adapter<QuizResult_Adapter.
 
     @Override
     public int getItemCount() {
-        return questions!=null?15:0;
+        return questions!=null?10:0;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{

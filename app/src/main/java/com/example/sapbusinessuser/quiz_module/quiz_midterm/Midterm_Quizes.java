@@ -142,3 +142,4 @@ public class Midterm_Quizes extends AppCompatActivity {
     }
 
 }
+

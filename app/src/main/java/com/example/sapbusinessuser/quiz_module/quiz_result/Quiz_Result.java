@@ -6,13 +6,11 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.sapbusinessuser.R;
 import com.example.sapbusinessuser.adapters.QuizResult_Adapter;
 import com.example.sapbusinessuser.model.Question;
@@ -48,13 +46,13 @@ public class Quiz_Result extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         int totalScore = 0;
-        for(int i = 0 ; i < 15;i++){
+        for(int i = 0 ; i < 10;i++){
             Question question  = questioAnswers.get(i);
             if(question.getAnswer().equals(question.getUser_answer())){
                 totalScore++;
             }
         }
-        tv_score.setText("Total Score : "+totalScore+"/"+15);
+        tv_score.setText("Total Score : "+totalScore+"/"+10);
 
     }
 
@@ -76,3 +74,4 @@ public class Quiz_Result extends AppCompatActivity {
 
 
 }
+

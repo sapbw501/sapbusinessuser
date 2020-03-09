@@ -107,6 +107,10 @@ public class View_Quiz extends AppCompatActivity {
 
         }
 
+        question_multiple.setVisibility(View.GONE);
+        question_trueorfalse.setVisibility(View.GONE);
+        question_identification.setVisibility(View.GONE);
+
         tv_question.setVisibility(View.GONE);
         btn_choiceA.setVisibility(View.GONE);
         btn_choiceB.setVisibility(View.GONE);
@@ -230,7 +234,7 @@ public class View_Quiz extends AppCompatActivity {
     private Question quest;
     private void SetQuestion(){
 
-        if(questionNumber>=15){
+        if(questionNumber>=10){
             btn_choiceA.setEnabled(false);
             btn_choiceB.setEnabled(false);
             btn_choiceC.setEnabled(false);
@@ -320,8 +324,8 @@ public class View_Quiz extends AppCompatActivity {
             btn_true.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    btn_true.setEnabled(false);
-                    btn_false.setEnabled(false);
+                    btn_true.setEnabled(true);
+                    btn_false.setEnabled(true);
                     quest.setUser_answer("True");
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
@@ -341,8 +345,8 @@ public class View_Quiz extends AppCompatActivity {
             btn_false.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    btn_true.setEnabled(false);
-                    btn_false.setEnabled(false);
+                    btn_true.setEnabled(true);
+                    btn_false.setEnabled(true);
                     quest.setUser_answer("False");
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {

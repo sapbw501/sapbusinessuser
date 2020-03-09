@@ -10,7 +10,8 @@
             android:layout_margin="@dimen/fab_margin"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/slategray">
             <TextView
                 android:textStyle="bold"
                 android:text="Topic Name"

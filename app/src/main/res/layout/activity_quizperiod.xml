@@ -5,12 +5,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/slategray"
     tools:context=".MainActivity">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
+            android:background="@color/indigo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -27,21 +29,23 @@
             <ImageView
                 android:src="@drawable/logo"
                 android:layout_gravity="center"
-                android:layout_width="250dp"
-                android:layout_height="250dp" />
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="80dp"/>
             <TextView
                 android:layout_marginTop="@dimen/fab_margin"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:text="QUIZZES"
+                android:fontFamily="@font/latoregular"
                 android:textAllCaps="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
-                android:textColor="@color/white"
+                android:textColor="@color/indigo"
+                android:textSize="17sp"
                 android:background="@drawable/button_background"
-
                 android:id="@+id/prelim"
                 android:text="Prelim"
                 android:textAllCaps="false"
@@ -49,8 +53,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
-
-                android:textColor="@color/white"
+                android:textColor="@color/indigo"
+                android:textSize="17sp"
                 android:background="@drawable/button_background"
                 android:id="@+id/midterm"
                 android:text="Midterm"
@@ -60,9 +64,9 @@
                 android:layout_height="wrap_content" />
 
             <Button
-                android:textColor="@color/white"
+                android:textColor="@color/indigo"
+                android:textSize="17sp"
                 android:background="@drawable/button_background"
-
                 android:layout_marginBottom="50dp"
                 android:id="@+id/finals"
                 android:text="Finals"

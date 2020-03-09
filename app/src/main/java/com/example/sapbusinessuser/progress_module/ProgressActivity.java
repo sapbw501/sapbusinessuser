@@ -116,7 +116,7 @@ public class ProgressActivity extends AppCompatActivity {
         yAxis.setAxisMinimum(0f);
         yAxis.setDrawGridLines(false);
         yAxis.setGridColor(Color.BLACK);
-        yAxis.setAxisMaximum(15f);
+        yAxis.setAxisMaximum(10f);
         yAxis.setGranularity(1f);
         yAxis.setLabelCount(10, true);
         XAxis xAxis = mChart.getXAxis();

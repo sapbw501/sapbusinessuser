@@ -1,4 +1,4 @@
-package com.example.sapbusinessuser.quiz_module.quiztem_list;
+package com.example.sapbusinessuser.quiz_module.quizitem_list;
 
 import android.content.DialogInterface;
 import android.graphics.Color;
