@@ -34,28 +34,31 @@ public class Prelim_Quizes extends AppCompatActivity {
     private SwipeRefreshLayout sr_swipeRefresh;
     private RecyclerView rv_recycleView;
     public static String activity;
+
     /*initialize*/
     @SuppressLint("RestrictedApi")
-    private void initUI(){
+    private void initUI() {
 
         sr_swipeRefresh = findViewById(R.id.sr_swiperefresh);
         rv_recycleView = findViewById(R.id.rv_recycleview);
-        rv_recycleView.setLayoutManager(new LinearLayoutManager(this,RecyclerView.VERTICAL,false));
+        rv_recycleView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
     }
 
-    private void initFirebase(){
+    private void initFirebase() {
         topicRef = FirebaseDatabase.getInstance().getReference()
                 .child("Topics");
     }
+
     private ArrayList<Topic> topics;
     private QuizTopicsList_Adapter adapter;
     private Toolbar toolbar;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.topics_activity);
         toolbar = findViewById(R.id.toolbar);
-        if(getSupportActionBar()==null){
+        if (getSupportActionBar() == null) {
             setSupportActionBar(toolbar);
 
             getSupportActionBar().setTitle("Prelim Quizzes");
@@ -75,49 +78,51 @@ public class Prelim_Quizes extends AppCompatActivity {
     }
 
 
-
     @Override
     protected void onResume() {
         super.onResume();
         sr_swipeRefresh.setRefreshing(true);
         getAllTopics();
     }
+
     @Override
     protected void onPause() {
         super.onPause();
         topicRef.removeEventListener(valueEventListener);
     }
-    private void getAllTopics(){
+
+    private void getAllTopics() {
 
         valueEventListener = topicRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 topics.clear();
-                for(DataSnapshot dataSnap : dataSnapshot.getChildren()){
+                for (DataSnapshot dataSnap : dataSnapshot.getChildren()) {
                     Topic topic = dataSnap.getValue(Topic.class);
-                    if(topic.getPeriod().equals("Prelim")) {
+                    if (topic.getPeriod().equals("Prelim")) {
                         topic.setKey(dataSnap.getKey());
                         topics.add(topic);
                     }
 
                 }
                 sr_swipeRefresh.setRefreshing(false);
-                if(topics.size()>0){
+                if (topics.size() > 0) {
                     adapter.SetData(topics);
-                }else{
+                } else {
                     adapter.SetData(new ArrayList<Topic>());
-                    showMessage("No Topics","No Data Found");
+                    showMessage("No Topics", "No Data Found");
                 }
 
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                showMessage("Error",databaseError.getMessage());
+                showMessage("Error", databaseError.getMessage());
             }
         });
     }
-    private void showMessage(String title,String message){
+
+    private void showMessage(String title, String message) {
         new AlertDialog.Builder(this)
                 .setCancelable(false)
                 .setTitle(title)
@@ -132,7 +137,7 @@ public class Prelim_Quizes extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
                 break;

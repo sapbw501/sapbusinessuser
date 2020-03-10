@@ -30,20 +30,23 @@ import java.util.Collections;
 public class Question_List extends AppCompatActivity {
     private Toolbar toolbar;
     private ArrayList<Question> questions;
+
     @Override
     protected void onPause() {
         super.onPause();
         fb_quizRef.removeEventListener(valueEventListener);
     }
+
     private RecyclerView recyclerView;
     private QuizManage_Adapter adapter;
     private SwipeRefreshLayout swipeRefreshLayout;
-    private void initUI(){
+
+    private void initUI() {
         swipeRefreshLayout = findViewById(R.id.swiperefresh);
         recyclerView = findViewById(R.id.recycleview);
-        toolbar = (Toolbar)findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         adapter = new QuizManage_Adapter(this);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL,false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(adapter);
         questions = new ArrayList<>();
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -55,11 +58,13 @@ public class Question_List extends AppCompatActivity {
         });
 
     }
+
     private DatabaseReference fb_quizRef;
     private ValueEventListener valueEventListener;
     public static Quiz quiz;
     public static Topic topic;
-    private void initFirebase(){
+
+    private void initFirebase() {
         fb_quizRef = FirebaseDatabase
                 .getInstance()
                 .getReference().child("Topics")
@@ -74,7 +79,7 @@ public class Question_List extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_list);
         toolbar = findViewById(R.id.toolbar);
-        if(getSupportActionBar()==null){
+        if (getSupportActionBar() == null) {
             setSupportActionBar(toolbar);
             toolbar.setTitleTextColor(Color.WHITE);
 
@@ -87,7 +92,7 @@ public class Question_List extends AppCompatActivity {
         initUI();
         initFirebase();
 
-        if(getSupportActionBar()==null){
+        if (getSupportActionBar() == null) {
             setSupportActionBar(toolbar);
             toolbar.setTitleTextColor(Color.WHITE);
             getSupportActionBar().setHomeButtonEnabled(true);
@@ -98,10 +103,9 @@ public class Question_List extends AppCompatActivity {
     }
 
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
                 break;
@@ -118,7 +122,8 @@ public class Question_List extends AppCompatActivity {
 
 
     }
-    private void getQuizes(){
+
+    private void getQuizes() {
         valueEventListener = fb_quizRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -132,12 +137,12 @@ public class Question_List extends AppCompatActivity {
 
                 }
                 swipeRefreshLayout.setRefreshing(false);
-                if(questions.size() == 0){
+                if (questions.size() == 0) {
                     adapter.SetData(new ArrayList<Question>());
                     fb_quizRef.removeEventListener(valueEventListener);
-                    showMessage("Failed","No Question here");
+                    showMessage("Failed", "No Question here");
 
-                }else{
+                } else {
 
                     adapter.SetData(questions);
                 }
@@ -149,12 +154,13 @@ public class Question_List extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
-                showMessage("Failed",databaseError.getMessage());
+                showMessage("Failed", databaseError.getMessage());
 
             }
         });
     }
-    private void showMessage(String title,String message){
+
+    private void showMessage(String title, String message) {
         new AlertDialog.Builder(this).setTitle(title)
                 .setMessage(message)
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
@@ -164,7 +170,6 @@ public class Question_List extends AppCompatActivity {
                     }
                 }).show();
     }
-
 
 
 }

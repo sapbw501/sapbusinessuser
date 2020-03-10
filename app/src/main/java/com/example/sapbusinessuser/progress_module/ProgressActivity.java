@@ -79,9 +79,9 @@ public class ProgressActivity extends AppCompatActivity {
             LineDataSet data = new LineDataSet(values, "Scores");
 
             // data.setValueFormatter(new ValueFormatter());
-            data.setColor(Color.RED);
+            data.setColor(Color.WHITE);
             data.setFillAlpha(110);
-            data.setCircleColor(Color.RED);
+            data.setCircleColor(Color.GREEN);
             List<ILineDataSet> dataSets = new ArrayList<>();
             dataSets.add(data);
             LineData data1 = new LineData(dataSets);
@@ -103,7 +103,7 @@ public class ProgressActivity extends AppCompatActivity {
     }
     public void initGraph(){
         // layout.setVisibility(View.INVISIBLE);
-        mChart = (LineChart) findViewById(R.id.chart);
+        mChart = findViewById(R.id.chart);
         mChart.setDragEnabled(false);
         mChart.setScaleEnabled(false);
         mChart.setClickable(false);

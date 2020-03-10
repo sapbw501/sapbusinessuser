@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.sapbusinessuser">
 
     <application
@@ -7,11 +8,12 @@
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:suppo2rtsRtl="true"
-        android:theme="@style/AppTheme">
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".MainActivity" >
-        <!--<activity android:name=".Login_Activity">-->
+        <activity android:name=".MainActivity">
+            <!--<activity android:name=".Login_Activity">-->
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +24,6 @@
         <activity
             android:name=".Register_Activity"
             android:launchMode="singleTask" />
-
 
         <activity
             android:name=".PeriodActivity"

@@ -39,14 +39,14 @@ public class QuizResult_Adapter extends RecyclerView.Adapter<QuizResult_Adapter.
         Question question = questions.get(position);
         int temp = position+1;
         if(!question.getAnswer().equals(question.getUser_answer())){
-            holder.cardView.setBackgroundColor(Color.parseColor("#b71c1c"));
+            holder.cardView.setBackgroundColor(Color.parseColor("#ed6868"));
             holder.explanation.setVisibility(View.VISIBLE);
             if(question.getExplanation()!=null){
                 holder.explanation.setText("Tip :\t"+question.getExplanation());
             }
         }else{
             holder.explanation.setVisibility(View.GONE);
-            holder.cardView.setBackgroundColor(Color.parseColor("#689f38"));
+            holder.cardView.setBackgroundColor(Color.parseColor("#99CCFF"));
 
         }
         holder.question.setText(temp+" .) "+question.getQuestion());

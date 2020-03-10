@@ -12,9 +12,9 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:background="@color/indigo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/indigo">
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
@@ -53,7 +53,7 @@
                 android:paddingStart="@dimen/fab_margin"
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
-                android:textColor="@color/white" />
+                android:textColor="@color/indigo" />
 
             <Button
 
@@ -65,7 +65,7 @@
                 android:paddingStart="@dimen/fab_margin"
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
-                android:textColor="@color/white" />
+                android:textColor="@color/indigo" />
 
             <Button
                 android:id="@+id/choiceC"
@@ -76,7 +76,7 @@
                 android:paddingStart="@dimen/fab_margin"
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
-                android:textColor="@color/white" />
+                android:textColor="@color/indigo" />
 
             <Button
 
@@ -88,7 +88,7 @@
                 android:paddingStart="@dimen/fab_margin"
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
-                android:textColor="@color/white" />
+                android:textColor="@color/indigo" />
 
         </LinearLayout>
 
@@ -141,6 +141,7 @@
                     android:id="@+id/identification_answer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:outlineAmbientShadowColor="@color/indigo"
                     android:hint="Input your answer" />
             </com.google.android.material.textfield.TextInputLayout>
 
