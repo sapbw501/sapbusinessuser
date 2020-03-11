@@ -48,10 +48,14 @@ dependencies {
     implementation 'com.google.guava:guava:24.0-android'
     implementation 'com.android.support:multidex:1.0.1'
 
+
+
     implementation 'pub.devrel:easypermissions:0.2.1'
 
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+
 
 }
 apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
