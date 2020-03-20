@@ -99,28 +99,6 @@
             android:theme="@style/Base.Theme.AppCompat" />
 
 
-        <activity android:name=".simulation.sap_activity.SapMainActivity"
-            android:screenOrientation="landscape"/>
-
-        <activity
-            android:name=".simulation.sap_activity.DetailActivity"
-            android:label="@string/app_product_details"
-            android:theme="@style/EditorTheme"
-            android:screenOrientation="landscape">
-        </activity>
-        <activity
-            android:name=".simulation.sap_activity.EditorActivity"
-            android:parentActivityName=".simulation.sap_activity.SapMainActivity"
-            android:theme="@style/EditorTheme"
-            android:screenOrientation="landscape">
-        </activity>
-        <activity android:name=".simulation.sap_activity.IsbnActivity"
-            android:screenOrientation="landscape">
-        </activity>
-        <provider
-            android:name=".simulation.sap_data.ProductProvider"
-            android:authorities="com.example.android.inventory"
-            android:exported="false" />
     </application>
 
 

@@ -1,13 +1,13 @@
 package com.example.sapbusinessuser;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.sapbusinessuser.model.AppPreference;
 import com.example.sapbusinessuser.quiz_module.QuizPeriodActivity;
@@ -71,5 +71,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
+/*Updated*/
 }
